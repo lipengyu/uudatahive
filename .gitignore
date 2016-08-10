@@ -55,8 +55,6 @@ hs_err_pid*
 #uumai config
 
 #ignore example libs build
-build/fengchao/libs/*
-build/yiqun/libs/*
 fengchao/uumai-common/common-libs/libs
 yiqun/uumai-search/search-libs/libs
 
