@@ -54,11 +54,11 @@ hs_err_pid*
 
 #uumai config
 
-#ignore example libs build 
-build/fengchao/libs
-build/yiqun/libs
+#ignore example libs build
+build/fengchao/libs/*
+build/yiqun/libs/*
 fengchao/uumai-common/common-libs/libs
 yiqun/uumai-search/search-libs/libs
 
-#temp remove rpc-neety project ,neety demo code 
+#temp remove rpc-neety project ,neety demo code
 #shop_indexer/rpc-netty/src/main/java/io
