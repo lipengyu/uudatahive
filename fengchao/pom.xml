@@ -10,9 +10,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
  
     </properties>
-    <artifactId>uumai-fengchao-parent</artifactId>
-      <name>uumai-fengchao-parent</name>
-   
+     <artifactId>uumai-fengchao-parent</artifactId>
+    
 
     <modules>
 
