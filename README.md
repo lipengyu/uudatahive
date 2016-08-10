@@ -1,7 +1,6 @@
 # uudatahive
 uudatahive is a distributed crawler  system
-蜂巢爬虫系统是一款java语言编写的分布式爬虫软件， 支持单机，分布式运行模式。
-
+蜂巢爬虫系统 是一套只需要定义XPath，就可实现爬取网站,APP的系统, 支持多种解析方式（XPath,正则表达式），多种下载方式（HttpClient库, PhantomJs, Selenium）,多种输出方式（Excel，MongoDB）。 可不做任何修改发布到Yarn,Docker,Mesos系统中实现分布式。
 
 # 爬虫构架
 构架一套基于JAVA的分布式爬虫系统，可单机运行， 可不做任何修改发布到Yarn,Docker,Mesos实现分布式。
@@ -13,7 +12,7 @@ uudatahive is a distributed crawler  system
 
 3. 下载方式： 支持java标准库, HttpClient库, PhantomJs, Selenium, MockDownload, FileDownload, ShellDownload;
 
-4. 解析方式：  支持HTML XPath,  Json XPath, 正则表达式；
+4. 解析方式：  支持HTML XPath,  Json XPath, 正则表达式， 自定义扩展解析库
 
 5. 保存方式：  支持本地文件输出: txt, Excel 格式， MongoDB输出（分布式）
 

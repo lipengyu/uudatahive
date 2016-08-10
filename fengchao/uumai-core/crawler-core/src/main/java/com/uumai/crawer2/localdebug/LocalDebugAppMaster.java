@@ -8,7 +8,8 @@ import com.uumai.crawer2.CrawlerWorker;
  */
 public class LocalDebugAppMaster extends Thread{
 
-    public void init() {
+    public LocalDebugAppMaster init() {
+        return this;
     }
 
     @Override
