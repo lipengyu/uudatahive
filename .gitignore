@@ -1,0 +1,64 @@
+
+#忽略全部*.class字节码文件
+*.class
+
+#针对移动端开发忽略.mtj.tmp/目录下所有文件
+.mtj.tmp/
+
+#忽略各类打包文件
+#此处列举*.jar/*.war/*.ear/*.zip四类打包文件
+*.jar
+*.war
+*.ear
+*.zip
+
+#增加忽略两类压缩文件
+*.tar.gz
+*.tar
+
+#忽略target/目录下所有文件
+target/
+#忽略subDir/target/目录下所有文件
+#因为maven工程有parent和children之分
+**/target/
+
+#忽略virtual machine crash logs文件
+hs_err_pid*
+
+#忽略日志文件
+#日志文件也可能是*.tar.gz或*.tar压缩处理过的
+*.log
+*.tar.gz.log
+*.tar.log
+
+#忽略掉临时文件
+*.bak
+
+#忽略eclipse项目描述文件
+*.classpath
+*.project
+*.prefs
+**/.settings/
+
+#忽略svn文件
+#忽略.svn/目录下全部文件，但是不包括subDir/.svn/目录下文件
+.svn/
+#忽略subDir目录下所有带.svn/目录的文件
+**/.svn/
+
+#igore idea project file
+*.iml
+*.ipr
+*.iws
+
+
+#uumai config
+
+#ignore example libs build 
+build/fengchao/libs
+build/yiqun/libs
+fengchao/uumai-common/common-libs/libs
+yiqun/uumai-search/search-libs/libs
+
+#temp remove rpc-neety project ,neety demo code 
+#shop_indexer/rpc-netty/src/main/java/io

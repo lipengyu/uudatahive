@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+     <parent>
+        <groupId>com.uumai</groupId>
+        <artifactId>uumai-fengchao-parent</artifactId>
+        <version>1.0</version>
+    </parent>
+
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.uumai</groupId>
+    <artifactId>uumai-multiserver</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+
+     <modules>
+
+        <module>crawler-multi-core</module>
+         <module>crawler-multi-quartz</module>
+        
+
+         <module>uumai-rpcserver</module>
+         <module>uumai-thrift</module>   
+         <module>java-bridge</module> 
+
+     </modules>
+    
+
+  
+</project>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ 
+    <parent>
+        <groupId>com.uumai</groupId>
+        <artifactId>uumai-common</artifactId>
+        <version>1.0</version>
+    </parent>
+
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.uumai</groupId>
+    <artifactId>common-libs</artifactId>
+    <version>1.0</version>
+ 
+   <name>uumai-libs</name>
+
+
+	<dependencies>
+
+   <!-- uumai activemq -->
+
+      <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-client</artifactId>
+      <version>5.12.0</version>
+    </dependency>
+
+ <!-- for activemq 
+      <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-jms_1.1_spec</artifactId>
+        <version>1.1</version>
+    </dependency>-->
+
+
+   <!-- uumai redis -->
+
+
+
+         <!-- uumai core -->
+
+                <!--
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>4.3.1</version>
+            </dependency>
+            
+        -->  
+
+       <!-- use by selenium -->        
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+             <version>2.48.2</version>
+              <exclusions>
+                  <exclusion>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-util</artifactId>
+                  </exclusion>
+                   <exclusion>
+                  <groupId>org.eclipse.jetty</groupId>
+                  <artifactId>jetty-io</artifactId>
+                  </exclusion>
+                </exclusions>
+        </dependency>  
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+             <version>2.48.2</version>
+        </dependency>  
+ <!-- 
+        <dependency>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-htmlunit-driver</artifactId>
+             <version>2.48.2</version>
+        </dependency>
+  
+        <dependency>
+          <groupId>net.sourceforge.htmlunit</groupId>
+          <artifactId>htmlunit</artifactId>
+          <version>2.19</version>
+        </dependency>
+ -->
+ 
+     <dependency>
+       <groupId>com.codeborne</groupId>
+      <artifactId>phantomjsdriver</artifactId>
+      <version>1.2.1</version>
+      <exclusions>
+        <exclusion>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-java</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.seleniumhq.selenium</groupId>
+          <artifactId>selenium-remote-driver</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+     
+
+      <!-- uumai util  -->
+
+
+      <dependency>
+        <groupId>joda-time</groupId>
+        <artifactId>joda-time</artifactId>
+        <version>2.0</version>
+    </dependency>
+
+      <dependency>
+       <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>3.7</version>
+      </dependency>
+
+
+
+      <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.4.7</version>
+    </dependency>
+
+
+    <!--  uumai xsoup -->
+
+
+         <dependency>
+              <groupId>net.sourceforge.htmlcleaner</groupId>
+              <artifactId>htmlcleaner</artifactId>
+              <version>2.10</version>
+            </dependency>
+            
+            <!--
+            <dependency>
+                  <groupId>us.codecraft</groupId>
+                <artifactId>xsoup</artifactId>
+                <version>0.2.4</version>
+            </dependency>
+        -->
+             <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>2.3.1</version>
+           </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>1.1.37</version>
+            </dependency>
+
+              <dependency>
+                  <groupId>com.jayway.jsonpath</groupId>
+                  <artifactId>json-path</artifactId>
+                <version>0.8.1</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>3.2.1</version>
+            </dependency>
+          
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>1.7.2</version>
+            </dependency>
+             
+               
+
+               <!-- uumai kafka-->
+             <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.10</artifactId>
+            <version>0.8.2.1</version>
+          </dependency>
+
+               <!-- uumai mongo-->
+
+    <!-- MongoDB -->
+    <!-- 2.1 is required by morphia 0.96 -->
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongo-java-driver</artifactId>
+      <version>2.12.4</version>
+    </dependency>
+
+    <!-- Morphia for MongoDB 
+    <dependency>
+      <groupId>org.mongodb.morphia</groupId>
+      <artifactId>morphia</artifactId>
+      <version>0.108</version>
+      </dependency>
+    -->
+
+               <!-- uumai redis-->
+
+
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>2.8.0</version>
+    </dependency>
+
+
+      <!-- uumai yarn-->
+
+    <!-- Hadoop hdfs -->
+
+ 
+      <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-hdfs</artifactId>
+      <version>2.6.0</version>
+      <exclusions>
+          <exclusion>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>com.sun.jersey</groupId>
+          <artifactId>jersey-core</artifactId>
+        </exclusion>
+        </exclusions>
+    </dependency>
+    
+
+     <!-- 'mvn dependency:analyze' fails to detect use of this dependency -->
+     
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-common</artifactId>
+       <version>2.6.0</version>
+      <exclusions>
+        <exclusion>
+          <groupId>commons-el</groupId>
+          <artifactId>commons-el</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>tomcat</groupId>
+          <artifactId>jasper-runtime</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>tomcat</groupId>
+          <artifactId>jasper-compiler</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.mortbay.jetty</groupId>
+          <artifactId>jsp-2.1-jetty</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    
+
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-yarn-common</artifactId>
+      <version>2.6.0</version>
+       <exclusions>
+          <exclusion>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId>
+        </exclusion>
+        </exclusions>
+    </dependency>
+
+ 
+   
+      <!--uumai zookeeper-->
+
+
+   <dependency>
+      <groupId>org.apache.zookeeper</groupId>
+      <artifactId>zookeeper</artifactId>
+        <version>3.3.6</version>
+    </dependency>
+
+      <dependency>
+        <groupId>org.apache.curator</groupId>
+        <artifactId>curator-recipes</artifactId>
+        <version>2.6.0</version>
+      </dependency>
+
+
+        <!--license  check-->
+        <dependency>
+          <groupId>com.verhas</groupId>
+          <artifactId>license3j</artifactId>
+          <version>1.0.7</version>
+        </dependency>
+
+
+        <!-- -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-pool2</artifactId>
+        <version>2.3</version>
+     </dependency>
+
+    <dependency>
+      <groupId>commons-beanutils</groupId>
+      <artifactId>commons-beanutils</artifactId>
+      <version>1.9.2</version>
+    </dependency>
+
+ 
+  
+</dependencies>
+
+  <build>
+        <plugins>
+
+            
+
+
+            <plugin>  
+                <groupId>org.apache.maven.plugins</groupId>  
+                <artifactId>maven-dependency-plugin</artifactId>  
+                <executions>  
+                <execution>  
+                <id>copy</id>  
+                <phase>install</phase>  
+                <goals>  
+                    <goal>copy-dependencies</goal>  
+                </goals>  
+                <configuration>  
+                <outputDirectory>libs</outputDirectory>    
+                </configuration>  
+                </execution>  
+                </executions>  
+            </plugin> 
+                </plugins>
+    </build>
+
+
+</project>
