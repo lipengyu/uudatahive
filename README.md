@@ -18,7 +18,7 @@
 
 # 最简单的爬虫：
 
-爬取百度搜索某个关键字的结果数量
+爬取百度搜索某个关键字（java）的结果数量
 ```
 public class BaiduSearch extends QuartzLocalDebugAppMaster {
 	@Override
@@ -71,10 +71,13 @@ mvn eclipse:eclipse  or mvn idea:idea   生成项目
 定义爬虫内容
 调试
 ```
-# 构架设计， 开发手册
+# 开发手册
 
-[[gitbook]](https://kanxg.gitbooks.io/uudatahive/content/)
+[[开发手册]](https://kanxg.gitbooks.io/uudatahive/content/)
 
+包含已经解析的Xpath，共享
+
+[[Xpath参考]](https://kanxg.gitbooks.io/fegnchao_xpath/content/)
 
 
 # 分布式爬虫原理
