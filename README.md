@@ -43,30 +43,51 @@ public class BaiduSearch extends QuartzLocalDebugAppMaster {
 PreCondition:   安装了JDK8, Maven, Git
 
 git clone https://github.com/kanxg/uudatahive
+
 cd uudatahive
+
 ./bin/buildcore.sh             // 编译core
+
 ./bin/buildapp.sh   example    //编译 demo项目
 
+
 运行 Demo 例子
+
 cd build/fengchao
+
 ./uumai.sh com.uumai.crawer.quartz.gupiao.baidu.BaiduSearch
 
 
 # 开发新的爬虫
+```
 cd crawler-website/crawler-example/
 mvn eclipse:eclipse  or mvn idea:idea   生成项目
-
 在eclipse or IntellJ 中 import项目
 定义一个类继承自QuartzLocalDebugAppMaster，  添加 dobusiness() 方法
 定义爬虫内容
 调试
+```
+# 构架设计， 开发手册
 
+[[gitbook]](https://kanxg.gitbooks.io/uudatahive/content/)
+
+
+# 问题解决以及爬虫定义分享
+
+* 官方QQ群：uudata蜂巢系统交流群 117354543   
 
 # 提交分布式系统
-1. 当前系统支持4种分布式：
+
+1. 当前系统支持5种分布式：
+
  a)  YARN,  Hadoop 分布式系统
+
  b)  Docker 虚拟化分布式
+
  c） Mesos 分布式系统 （未完成）
- d） Apache Storm (旧的系统，已启用)
+
+ d） Apache Storm (旧的系统，已弃用)
+
+ e） Standalone  (旧的系统，已弃用)
 
 2.  如何0代码修改，提交分布式系统？
