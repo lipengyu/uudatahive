@@ -25,7 +25,6 @@ public class BaiduSearch extends QuartzLocalDebugAppMaster {
  		String url="http://www.baidu.com/s?wd="+searchtext;
 		QuartzCrawlerTasker tasker=new QuartzCrawlerTasker();
 		 tasker.setUrl(url);
-// 	        tasker.setStoreTableName("baidu");
  	        tasker.addResultItem("searchtext", searchtext);
  	        tasker.addXpath("result", "//div[@class='nums']/text()");
 	        putDistributeTask(tasker);
@@ -33,9 +32,7 @@ public class BaiduSearch extends QuartzLocalDebugAppMaster {
 	
 	
 	public static void main(String[] args) throws Exception{
- 		BaiduSearch master=new BaiduSearch();
-     	master.init();
-      	master.start();
- 	  
+ 	  		new BaiduSearch().init().start();
+
 	}
 }
