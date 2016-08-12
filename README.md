@@ -38,29 +38,29 @@ public class BaiduSearch extends QuartzLocalDebugAppMaster {
 {"result":"百度为您找到相关结果约15,100,000个"}
 ```
 
-# 爬虫原理
+# 单机爬虫原理
+
+* AppMaster 创建一个tasker，定义url,Xpath, Download Type, result Format,提交tasker给Worker；
+
+* Worker 拿到任务，初始化，从DownloadFactory构建下载器，下载， 解析，输出；
 
 ![image](https://raw.githubusercontent.com/kanxg/uudatahive/master/doc/uumai_fengchao.png)
 
 
 # 下载安装
+```
 PreCondition:   安装了JDK8, Maven, Git
-
 git clone https://github.com/kanxg/uudatahive
-
 cd uudatahive
-
 ./bin/buildcore.sh             // 编译core
-
 ./bin/buildapp.sh   example    //编译 demo项目
-
+```
 
 运行 Demo 例子
-
+```
 cd build/fengchao
-
 ./uumai.sh com.uumai.crawer.quartz.gupiao.baidu.BaiduSearch
-
+```
 
 # 开发新的爬虫
 ```
@@ -76,26 +76,32 @@ mvn eclipse:eclipse  or mvn idea:idea   生成项目
 [[gitbook]](https://kanxg.gitbooks.io/uudatahive/content/)
 
 
-# 问题解决以及爬虫定义分享
 
-* 官方QQ群：uudata蜂巢系统交流群 117354543   
+# 分布式爬虫原理
 
-# 提交分布式系统
+ * AppMaster 创建tasker，序列化，提交到任务池。
 
-1. 当前系统支持5种分布式：
-
- a)  YARN,  Hadoop 分布式系统
-
- b)  Docker 虚拟化分布式
-
- c） Mesos 分布式系统 （未完成）
-
- d） Apache Storm (旧的系统，已弃用)
-
- e） Standalone  (旧的系统，已弃用)
-
+ * AdminAppMaster 提交工作池到分布式系统， 工作池启动，从任务池拿取任务，反序列化tasker， 构建worker，运行任务；
 
  ![image](https://raw.githubusercontent.com/kanxg/uudatahive/master/doc/uumai_distributed.png)
- 
+
+ # 提交分布式系统
+
+ 1. 当前系统支持5种分布式：
+
+  a)  YARN,  Hadoop 分布式系统
+
+  b)  Docker 虚拟化分布式
+
+  c） Mesos 分布式系统 （未完成）
+
+  d） Apache Storm (旧的系统，已弃用)
+
+  e） Standalone  (旧的系统，已弃用)
+
 
 2.  如何0代码修改，提交分布式系统？
+
+# 问题解决以及爬虫定义分享
+
+* 官方QQ群：uudata蜂巢系统交流群 117354543  
