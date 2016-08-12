@@ -38,6 +38,10 @@ public class BaiduSearch extends QuartzLocalDebugAppMaster {
 {"result":"百度为您找到相关结果约15,100,000个"}
 ```
 
+# 爬虫原理
+
+![image](https://raw.githubusercontent.com/kanxg/uudatahive/master/doc/uumai_fengchao.png)
+
 
 # 下载安装
 PreCondition:   安装了JDK8, Maven, Git
@@ -89,5 +93,9 @@ mvn eclipse:eclipse  or mvn idea:idea   生成项目
  d） Apache Storm (旧的系统，已弃用)
 
  e） Standalone  (旧的系统，已弃用)
+
+
+ ![image](https://raw.githubusercontent.com/kanxg/uudatahive/master/doc/uumai_distributed.png)
+ 
 
 2.  如何0代码修改，提交分布式系统？
