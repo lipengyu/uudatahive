@@ -44,7 +44,7 @@ public class BaiduSearch extends QuartzLocalDebugAppMaster {
 
 * Worker 拿到任务，初始化，从DownloadFactory构建下载器，下载， 解析，输出；
 
-![image](https://raw.githubusercontent.com/kanxg/uudatahive/master/doc/uumai_fengchao.png)
+![image](https://kanxg.gitbooks.io/uudatahive/content/img/uumai_fengchao.png)
 
 
 # 下载安装
@@ -77,7 +77,7 @@ mvn eclipse:eclipse  or mvn idea:idea   生成项目
 
 包含已经解析的Xpath，共享
 
-[[Xpath参考]](https://kanxg.gitbooks.io/fegnchao_xpath/content/)
+[[Xpath参考]](https://www.gitbook.com/book/kanxg/fengchao_xpath/details)
 
 
 # 分布式爬虫原理
@@ -86,7 +86,7 @@ mvn eclipse:eclipse  or mvn idea:idea   生成项目
 
  * AdminAppMaster 提交工作池到分布式系统， 工作池启动，从任务池拿取任务，反序列化tasker， 构建worker，运行任务；
 
- ![image](https://raw.githubusercontent.com/kanxg/uudatahive/master/doc/uumai_distributed.png)
+ ![image](https://kanxg.gitbooks.io/uudatahive/content/img/uumai_distributed.png)
 
  # 提交分布式系统
 
