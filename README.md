@@ -23,7 +23,7 @@
 public class BaiduSearch extends QuartzLocalDebugAppMaster {
 	@Override
 	public void dobusiness() throws Exception {
-		QuartzCrawlerTasker tasker = new QuartzCrawlerTasker();     
+		QuartzCrawlerTasker tasker = new QuartzCrawlerTasker();
 		tasker.setUrl("http://www.baidu.com/s?wd=java");              //定义URL
 		tasker.addXpath("result", "//div[@class='nums']/text()");     //定义结果的XPath
 		putDistributeTask(tasker);                                     //执行
@@ -52,14 +52,14 @@ public class BaiduSearch extends QuartzLocalDebugAppMaster {
 PreCondition:   安装了JDK8, Maven, Git
 git clone https://github.com/kanxg/uudatahive
 cd uudatahive
-./bin/buildcore.sh             // 编译core
+./bin/buildfengchao.sh             // 编译core
 ./bin/buildapp.sh   example    //编译 demo项目
 ```
 
 运行 Demo 例子
 ```
 cd build/fengchao
-./uumai.sh com.uumai.crawer.quartz.gupiao.baidu.BaiduSearch
+./uumai.sh com.uumai.crawer.quartz.search.baidu.BaiduSearch
 ```
 
 # 开发新的爬虫
@@ -107,4 +107,4 @@ mvn eclipse:eclipse  or mvn idea:idea   生成项目
 
 # 问题解决以及爬虫定义分享
 
-* 官方QQ群：uudata蜂巢系统交流群 117354543  
+* 官方QQ群：uudata蜂巢系统交流群 117354543
