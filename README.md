@@ -1,5 +1,5 @@
 # uudatahive（蜂巢爬虫系统）
-蜂巢爬虫系统是一套只需要定义XPath，就可实现爬取网站,APP的系统, 支持多种解析方式（XPath,正则表达式），多种下载方式（HttpClient库, PhantomJs, Selenium）,多种输出方式（Excel，MongoDB）。 可不做任何修改发布到Yarn,Docker,Mesos系统中实现分布式。
+蜂巢爬虫系统是一套只需要定义XPath，就可实现爬取网站,APP的系统, 支持多种解析方式（XPath,正则表达式），多种下载方式（HttpClient库, PhantomJs, JBrowser, Selenium-Firefox,Chrome ）,多种输出方式（Excel，MongoDB）。 可不做任何修改发布到Yarn,Docker,Mesos系统中实现分布式。
 
 # 爬虫构架
 构架一套基于JAVA的分布式爬虫系统，可单机运行， 可不做任何修改发布到Yarn,Docker,Mesos实现分布式。
@@ -9,7 +9,7 @@
 
 2. 可提交UUData分布式爬虫云, 直接支持分布式; (部分代码整理中，开源plan)
 
-3. 下载方式： 支持java标准库, HttpClient库, PhantomJs, Selenium, MockDownload, FileDownload, ShellDownload;
+3. 下载方式： 支持java标准库, HttpClient库, PhantomJs, JBrowser , Selenium-Firefox,Chrome, MockDownload, FileDownload, ShellDownload;
 
 4. 解析方式：  支持HTML XPath,  Json XPath, 正则表达式， 自定义扩展解析库
 
@@ -20,7 +20,7 @@
 
 爬取百度搜索某个关键字（java）的结果数量
 ```
-public class BaiduSearch extends QuartzLocalDebugAppMaster {
+public class BaiduSearch extends QuartzLocalAppMaster {
 	@Override
 	public void dobusiness() throws Exception {
 		QuartzCrawlerTasker tasker = new QuartzCrawlerTasker();
@@ -38,13 +38,6 @@ public class BaiduSearch extends QuartzLocalDebugAppMaster {
 {"result":"百度为您找到相关结果约15,100,000个"}
 ```
 
-# 单机爬虫原理
-
-* AppMaster 创建一个tasker，定义url,Xpath, Download Type, result Format,提交tasker给Worker；
-
-* Worker 拿到任务，初始化，从DownloadFactory构建下载器，下载， 解析，输出；
-
-![image](https://kanxg.gitbooks.io/uudatahive/content/img/uumai_fengchao.png)
 
 
 # 下载安装
@@ -52,8 +45,8 @@ public class BaiduSearch extends QuartzLocalDebugAppMaster {
 PreCondition:   安装了JDK8, Maven, Git
 git clone https://github.com/kanxg/uudatahive
 cd uudatahive
-./bin/buildfengchao.sh             // 编译core
-./bin/buildapp.sh   example    //编译 demo项目
+./bin/buildfengchao.sh             //编译 core
+./bin/buildapp.sh   example    	   //编译 demo项目
 ```
 
 运行 Demo 例子
@@ -71,13 +64,30 @@ mvn eclipse:eclipse  or mvn idea:idea   生成项目
 定义爬虫内容
 调试
 ```
+
 # 开发手册
 
-[[开发手册]](https://kanxg.gitbooks.io/uudatahive/content/)
+[[开发手册]](https://kanxg.gitbooks.io/uudatahive/content/)  如何使用蜂巢系统的参考
 
-包含已经解析的Xpath，共享
 
-[[Xpath参考]](https://www.gitbook.com/book/kanxg/fengchao_xpath/details)
+[[Xpath参考]](https://www.gitbook.com/book/kanxg/fengchao_xpath/details) 包含已经解析的Xpath
+
+* 京东,amazon，dangdang，一号店等B2C商城的价格解析
+* 携程，去哪等酒店解析
+* 各航空公司机票价格解析
+* 拉勾，猎聘,linkedin等简历解析
+* 搜索引擎解析
+* 股票解析
+
+
+
+# 单机爬虫原理
+
+* AppMaster 创建一个tasker，定义url,Xpath, Download Type, result Format,提交tasker给Worker；
+
+* Worker 拿到任务，初始化，从DownloadFactory构建下载器，下载， 解析，输出；
+
+![image](https://kanxg.gitbooks.io/uudatahive/content/img/uumai_fengchao.png)
 
 
 # 分布式爬虫原理
